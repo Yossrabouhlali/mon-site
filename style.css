@@ -1,0 +1,45 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+body { background: #f8f9fa; color: #333; }
+
+/* Header */
+header { background: #007bff; color: #fff; padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 100; }
+header .container { width: 90%; margin: auto; display: flex; justify-content: space-between; align-items: center; }
+header nav a { color: #fff; margin-left: 15px; text-decoration: none; font-weight: bold; }
+header nav a:hover { text-decoration: underline; }
+#menuToggle { display: none; background: none; border: none; font-size: 24px; color: #fff; cursor: pointer; }
+
+/* Sections */
+.section { padding: 100px 20px 60px 20px; max-width: 900px; margin: 0 auto; opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
+.section h2 { margin-bottom: 20px; color: #007bff; }
+
+/* Skills */
+.skills { display: flex; flex-wrap: wrap; gap: 10px; }
+.skills div { background: #e9ecef; padding: 10px 15px; border-radius: 5px; }
+
+/* Projects */
+.projects { display: flex; flex-wrap: wrap; gap: 20px; }
+.project-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0px 4px 6px rgba(0,0,0,0.1); flex: 1 1 300px; transition: transform 0.3s; }
+.project-card:hover { transform: translateY(-5px); }
+
+/* Form */
+form { display: flex; flex-direction: column; gap: 10px; }
+form input, form textarea { padding: 10px; border-radius: 5px; border: 1px solid #ccc; width: 100%; }
+form button { padding: 10px; border: none; border-radius: 5px; background: #007bff; color: #fff; cursor: pointer; }
+form button:hover { background: #0056b3; }
+
+/* Footer */
+footer { background: #007bff; color: #fff; text-align: center; padding: 15px 0; margin-top: 50px; }
+
+/* Responsive */
+@media (max-width:768px){
+    #menuToggle { display: block; }
+    header nav { display: none; flex-direction: column; background: #007bff; width: 100%; }
+    header nav a { margin: 10px 0; }
+    header nav.show { display: flex; }
+}
+
+/* Animation on scroll */
+.fade-in { opacity: 0; transform: translateY(20px); }
+.fade-in.show { opacity: 1; transform: translateY(0); }
